@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SUD Education Hub</title>
+<style>
+:root{
+  --bg:#0b1014;
+  --panel:#141b21;
+  --panel-2:#1b252d;
+  --border:#29343f;
+  --text:#e6edf3;
+  --muted:#9ba8b4;
+  --teal:#56b0a8;
+  --amber:#d3a24d;
+  --green:#76c287;
+  --violet:#8b7adb;
+  --coral:#da7965;
+  --blue:#68a8d7;
+  --shadow:0 18px 38px rgba(0,0,0,0.28);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;min-height:100%;font-family:"Segoe UI",system-ui,sans-serif;background:
+radial-gradient(circle at top left, rgba(86,176,168,0.11), transparent 24%),
+radial-gradient(circle at top right, rgba(211,162,77,0.11), transparent 28%),
+linear-gradient(180deg, #091015 0%, var(--bg) 100%);
+color:var(--text)}
+body{padding:28px 16px 44px}
+.shell{max-width:1120px;margin:0 auto}
+.hero{display:grid;grid-template-columns:1.2fr .9fr;gap:18px;margin-bottom:20px}
+.panel{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);border-radius:22px;box-shadow:var(--shadow)}
+.hero-copy{padding:28px}
+.eyebrow{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+h1{margin:0 0 12px;font-size:clamp(2rem,5vw,3.5rem);line-height:1.02}
+.lede{margin:0;max-width:700px;color:var(--muted);line-height:1.65}
+.hero-notes{padding:22px}
+.hero-notes h2{margin:0 0 12px;font-size:1rem}
+.note-list{display:grid;gap:10px}
+.note{padding:12px;border:1px solid var(--border);border-radius:14px;background:rgba(255,255,255,0.03)}
+.note strong{display:block;margin-bottom:4px}
+.note span{font-size:12px;color:var(--muted);line-height:1.45}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.card{display:block;padding:18px;border:1px solid var(--border);border-radius:18px;background:linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.02));text-decoration:none;color:inherit;transition:transform .16s ease,border-color .16s ease,background .16s ease}
+.card:hover{transform:translateY(-2px)}
+.card.teal:hover{border-color:rgba(86,176,168,0.42);background:rgba(86,176,168,0.08)}
+.card.amber:hover{border-color:rgba(211,162,77,0.42);background:rgba(211,162,77,0.08)}
+.card.green:hover{border-color:rgba(118,194,135,0.42);background:rgba(118,194,135,0.08)}
+.card.violet:hover{border-color:rgba(139,122,219,0.42);background:rgba(139,122,219,0.08)}
+.card.coral:hover{border-color:rgba(218,121,101,0.42);background:rgba(218,121,101,0.08)}
+.badge{display:inline-flex;align-items:center;padding:6px 10px;border-radius:999px;font-size:12px;font-weight:700;margin-bottom:12px}
+.teal .badge{background:rgba(86,176,168,0.14);color:#8ed8d2}
+.amber .badge{background:rgba(211,162,77,0.14);color:#f0c67d}
+.green .badge{background:rgba(118,194,135,0.14);color:#a7e0b2}
+.violet .badge{background:rgba(139,122,219,0.14);color:#bfaff1}
+.coral .badge{background:rgba(218,121,101,0.14);color:#f0b0a2}
+.card h2{margin:0 0 8px;font-size:1.25rem}
+.card p{margin:0 0 12px;color:var(--muted);line-height:1.55}
+.meta{display:flex;gap:8px;flex-wrap:wrap}
+.pill{font-size:11px;font-weight:700;padding:5px 8px;border:1px solid var(--border);border-radius:999px;background:rgba(255,255,255,0.03);color:var(--muted)}
+.footer{margin-top:18px;text-align:center;color:var(--muted);font-size:12px}
+@media (max-width:820px){.hero{grid-template-columns:1fr}}
+@media (max-width:620px){body{padding:20px 12px 34px}.panel{border-radius:18px}.hero-copy,.hero-notes{padding:20px}}
+</style>
+</head>
+<body>
+  <div class="shell">
+    <section class="hero">
+      <div class="panel hero-copy">
+        <div class="eyebrow">Consolidated Destination Repo</div>
+        <h1>SUD Education Hub</h1>
+        <p class="lede">This destination repo brings the clinician-facing SUD education dashboards into one local structure. Each topic keeps its own folder, while the top-level hub replaces the old cross-repo navigation pattern from `AddictionEd`.</p>
+      </div>
+      <aside class="panel hero-notes">
+        <h2>Current Structure</h2>
+        <div class="note-list">
+          <div class="note"><strong>Topic pages preserved</strong><span>Each major SUD topic remains in its own folder instead of being flattened into a single page.</span></div>
+          <div class="note"><strong>Extra resources preserved</strong><span>The phenobarbital AWS reference page and the opioid `.docx` downloads stay with their topic folders.</span></div>
+          <div class="note"><strong>Hub concept reused</strong><span>The role of `AddictionEd` is carried forward into this root landing page.</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="grid" aria-label="SUD education topics">
+      <a class="card teal" href="opioids/index.html">
+        <div class="badge">Opioids</div>
+        <h2>Opioid Use Disorder</h2>
+        <p>Main OUD topic dashboard plus downloadable `.docx` education handouts preserved in the same folder.</p>
+        <div class="meta">
+          <span class="pill">Topic page</span>
+          <span class="pill">Downloads preserved</span>
+        </div>
+      </a>
+
+      <a class="card amber" href="alcohol-benzodiazepines/index.html">
+        <div class="badge">Alcohol / BZD</div>
+        <h2>Alcohol and Benzodiazepine Use Disorders</h2>
+        <p>Main topic dashboard plus the separate phenobarbital AWS clinical reference tool.</p>
+        <div class="meta">
+          <span class="pill">Topic page</span>
+          <span class="pill">AWS reference page</span>
+        </div>
+      </a>
+
+      <a class="card violet" href="stimulants/index.html">
+        <div class="badge">Stimulants</div>
+        <h2>Stimulant Use Disorder</h2>
+        <p>Standalone stimulant education dashboard preserved as its own topic folder.</p>
+        <div class="meta">
+          <span class="pill">Topic page</span>
+        </div>
+      </a>
+
+      <a class="card green" href="cannabis/index.html">
+        <div class="badge">Cannabis</div>
+        <h2>Cannabis Use Disorder</h2>
+        <p>Standalone cannabis education dashboard preserved as its own topic folder.</p>
+        <div class="meta">
+          <span class="pill">Topic page</span>
+        </div>
+      </a>
+
+      <a class="card coral" href="perinatal/index.html">
+        <div class="badge">Perinatal</div>
+        <h2>Perinatal Substance Use Disorders</h2>
+        <p>Perinatal-focused topic dashboard preserved in its own folder for clean local navigation.</p>
+        <div class="meta">
+          <span class="pill">Topic page</span>
+        </div>
+      </a>
+    </section>
+
+    <div class="footer">Source repos remain unchanged. This root page is now the local entry point for the planned `sud-education-hub` destination repo.</div>
+  </div>
+</body>
+</html>
