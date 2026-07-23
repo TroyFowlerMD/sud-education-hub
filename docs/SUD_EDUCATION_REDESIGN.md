@@ -73,9 +73,9 @@ The initial units are opioids, alcohol/benzodiazepines, stimulants, cannabis, an
 - **Current phase:** repository orientation and cross-site feedback-platform foundation.
 - **Active topic unit:** none selected.
 - **Completed:** repository map, live-route smoke review, documentation audit, capability review, and redesign-process decisions.
-- **Completed deliverables:** repository orientation audit; living redesign document; private `website-feedback` repository and feedback API source; migration of nine legacy feedback issues.
-- **Immediate next steps:** deploy and verify the shared feedback API, migrate the Psych Scheduler and SUD FormSubmit clients, then present topic-unit candidates for selection.
-- **Material blocker:** choose a public Vercel project/hostname before deploying the shared API; do not silently select one.
+- **Completed deliverables:** repository orientation audit; living redesign document; private `website-feedback` repository and feedback API source; migration of nine legacy feedback issues; Vercel production project `website-feedback` deployed on 2026-07-23.
+- **Immediate next steps:** approve the production API hostname, configure its server-side GitHub token, then migrate and verify the Psych Scheduler and SUD FormSubmit clients before presenting topic-unit candidates for selection.
+- **Material blockers:** Vercel assigned `website-feedback-nine.vercel.app` rather than the expected `website-feedback.vercel.app`; do not point production clients to it until Dr. Fowler confirms the hostname. `GITHUB_FEEDBACK_TOKEN` is also not configured, so the deployed endpoint intentionally returns `feedback_not_configured` for an allowed request.
 
 ## Maintenance rules
 

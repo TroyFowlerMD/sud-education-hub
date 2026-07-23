@@ -30,3 +30,8 @@ This file records completed Codex work sessions for SUD Education Hub. Append ne
 - In progress: Deploy the shared service, configure its server-side GitHub permissions, migrate Psych Scheduler and SUD FormSubmit clients, then select the first topic rebuild.
 - Blockers/notes: No topic unit is selected. A Vercel public project/hostname must be chosen before the shared API can be deployed; full SUD hosting remains on GitHub Pages pending first-unit comparison.
 
+### 2026-07-23 - Codex desktop - Shared feedback API production deployment
+- Completed: Confirmed Vercel project name `website-feedback`, created the production project, and deployed the API as READY. Verified that an allowed origin returns `feedback_not_configured` while an unapproved origin receives `403`; no feedback issue was created during these checks.
+- In progress: Approve the usable public API hostname, configure the server-side fine-grained GitHub token, then migrate the Psych Scheduler and SUD browser clients.
+- Blockers/notes: Vercel assigned `website-feedback-nine.vercel.app`, not the expected `website-feedback.vercel.app`; no production client points there yet. The project has no environment variables, so the API is safely inactive until `GITHUB_FEEDBACK_TOKEN` is configured.
+

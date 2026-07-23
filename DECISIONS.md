@@ -57,3 +57,9 @@ Context: The SUD hub is a working public GitHub Pages static site, while a share
 Decision: Keep the SUD public host on GitHub Pages through the first topic rebuild and use Vercel only for the shared feedback service. Reassess full Vercel hosting after a rebuilt unit can be compared in a real preview workflow.
 Rationale: This preserves the current public URL and avoids prematurely selecting a final public Vercel hostname while still enabling secure server-side feedback handling.
 Consequences: A later full-hosting decision must compare preview workflow, deployment/recovery behavior, URL continuity, and maintenance overhead, then obtain Dr. Fowler's explicit naming choice.
+
+### 2026-07-23 - Create the Shared Feedback Vercel Project, Pending Endpoint Approval
+Context: Dr. Fowler confirmed `website-feedback` for the shared feedback Vercel project. Vercel created the production project successfully but assigned `website-feedback-nine.vercel.app` rather than the expected unsuffixed hostname.
+Decision: The project may remain deployed for configuration and safe checks, but no production website will use the assigned hostname until Dr. Fowler explicitly accepts it or chooses a different final endpoint.
+Rationale: The project name is confirmed, while the automatically assigned public hostname differs from the expected name and is user-facing configuration.
+Consequences: The endpoint currently has no environment variables and returns `feedback_not_configured` for approved-origin submissions. Configure the narrowly scoped GitHub token only after the hostname decision, then verify the complete path before replacing FormSubmit.
