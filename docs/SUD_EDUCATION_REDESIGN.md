@@ -28,6 +28,12 @@ No PGY-level delivery model has been selected. Later exploration may compare sep
 
 Repository-wide work is allowed only when it supports all units without becoming a simultaneous curriculum or interface revamp.
 
+## Evidence and source standard
+
+For every topic unit, make educational-content decisions from the most current, applicable authoritative sources available at the time of review. Prioritize relevant guidance from the American Society of Addiction Medicine (ASAM), American Psychiatric Association (APA), and American Academy of Addiction Psychiatry (AAAP). Use authoritative federal and regulatory sources—such as SAMHSA, NIAAA, CDC, and FDA—when they govern the clinical question, medication information, epidemiology, or public-health recommendation. Use primary peer-reviewed literature to address questions not settled by those sources, and identify the evidence type and important limitations.
+
+Record the source, publication or update date, and what the source supports in each site-specific audit. Do not treat an older page, a secondary summary, or an unsupported numeric claim as authoritative merely because it is already in the repository.
+
 ## Capability guidance
 
 - **Browser control:** recommended for every rendered-site review, responsive/accessibility check, and deployment verification.
@@ -59,10 +65,10 @@ The initial units are opioids, alcohol/benzodiazepines, stimulants, cannabis, an
 | 2026-07-23 | Final | Use `website-feedback` as one private inbox for all TroyMD website Feedback / IT Requests. | Shared labels, issue filters, screenshots, and owner notifications are required. |
 | 2026-07-23 | Final | Keep SUD on GitHub Pages through the first rebuilt unit. | Use Vercel for the feedback API now; revisit full hosting after a real rebuilt-unit comparison. |
 | 2026-07-23 | Working hypothesis | Visualize is decision-triggered. | Use it for competing teaching/IA choices, not by default. |
+| 2026-07-23 | Final | Audit alcohol and benzodiazepines first, using an authoritative-source standard for this and every later unit. | Keep the combined boundary; prioritize current ASAM, APA, and AAAP guidance, then authoritative federal/regulatory sources and primary literature as needed. |
 
 ## Open questions
 
-- Which topic unit should receive the first complete audit and rebuild?
 - Which PGY pathway model best supports lecture flow and independent learning?
 - What is the presenter-versus-learner presentation-mode boundary?
 - Which duplicated dashboard components should become shared after the first unit proves the target architecture?
@@ -70,11 +76,11 @@ The initial units are opioids, alcohol/benzodiazepines, stimulants, cannabis, an
 
 ## Current phase and active site
 
-- **Current phase:** repository orientation and cross-site feedback-platform foundation.
-- **Active topic unit:** none selected.
+- **Current phase:** alcohol/benzodiazepines deep audit and research preparation.
+- **Active topic unit:** combined alcohol and benzodiazepines, including `phenobarbital-aws.html`.
 - **Completed:** repository map, live-route smoke review, documentation audit, capability review, and redesign-process decisions.
 - **Completed deliverables:** repository orientation audit; living redesign document; private `website-feedback` repository and feedback API source; migration of nine legacy feedback issues; Vercel production project `website-feedback` live at `all-website-feedback.vercel.app`; one-year, repository-restricted GitHub token stored only as a production Vercel secret; verified private text and screenshot issues plus rejected-origin behavior; GitHub Actions owner-notification workflow.
-- **Immediate next steps:** migrate and verify the Psych Scheduler client, then the five SUD FormSubmit clients, before presenting topic-unit candidates for selection.
+- **Immediate next steps:** complete rendered/code/content inventory and source-backed audit for the active unit; migrate and verify the Psych Scheduler client, then the five SUD FormSubmit clients as shared infrastructure work.
 - **Material blockers:** no infrastructure blocker. `website-feedback.vercel.app` remains unavailable; production clients must use the approved `all-website-feedback.vercel.app` endpoint until a later naming decision changes it.
 
 ## Maintenance rules

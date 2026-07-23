@@ -69,3 +69,15 @@ Context: Dr. Fowler requested `website-feedback.vercel.app`; Vercel rejected tha
 Decision: Do not use `website-feedback-nine.vercel.app`. Use the subsequently approved `all-website-feedback.vercel.app` endpoint until Dr. Fowler chooses a later naming change.
 Rationale: The endpoint name is user-facing and must remain under Dr. Fowler's control.
 Consequences: This does not affect the separate later decision about whether public SUD pages stay on GitHub Pages or migrate to Vercel.
+
+### 2026-07-23 - Select Alcohol and Benzodiazepines as the First Revamp Unit
+Context: The repository-wide orientation is complete, the shared feedback foundation is live, and Dr. Fowler selected the first site for detailed work.
+Decision: Begin with the combined alcohol/benzodiazepines unit, including `phenobarbital-aws.html`; do not split the grouping during this phase.
+Rationale: It is an intentional combined educational site and includes both foundational and clinically applied material suitable for exploring later PGY-1/PGY-3 pathways.
+Consequences: Do not begin a full redesign yet. First produce a site-specific rendered, code, content, UX, accessibility, and maintainability audit.
+
+### 2026-07-23 - Apply an Authoritative Source Standard Across SUD Units
+Context: Existing educational pages may contain legacy material of mixed provenance and currency.
+Decision: For each SUD unit, prioritize current applicable guidance from ASAM, APA, and AAAP; then use authoritative federal/regulatory sources such as SAMHSA, NIAAA, CDC, and FDA when relevant. Use primary peer-reviewed literature for questions those sources do not settle, and record source date, role, and evidence limitations in the site audit.
+Rationale: This keeps content review clinically reliable while avoiding unsupported certainty and stale guidance.
+Consequences: No content revision should rely only on the existing page or an unverified secondary source. The source standard applies to every later unit, not only alcohol/benzodiazepines.

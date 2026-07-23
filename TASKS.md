@@ -10,9 +10,10 @@
 - [~] Maintain `sud-education-hub` as the clinician-facing SUD education destination while keeping `sud-patient-education` separate.
 - [~] Establish the one-topic-unit-at-a-time SUD redesign process and maintain its canonical audit/governance records.
 - [~] Replace the Psych Scheduler and five SUD FormSubmit clients with the verified shared private `website-feedback` GitHub Issues / Vercel service before the first topic rebuild. The production API is live at `https://all-website-feedback.vercel.app/api/feedback`; text, screenshot, origin-rejection, labels, assignment, and owner-notification checks passed.
+- [~] Audit the combined alcohol/benzodiazepines unit, including `phenobarbital-aws.html`, before any redesign. Use current ASAM, APA, American Academy of Addiction Psychiatry, and other appropriate authoritative sources for all content decisions.
 
 ## Upcoming
-- [ ] Select the first topic unit for its detailed educational, technical, UX, and accessibility audit.
+- [x] Select the first topic unit for its detailed educational, technical, UX, and accessibility audit: alcohol and benzodiazepines.
 - [ ] After the first rebuilt topic unit, decide whether the public SUD hub remains on GitHub Pages or moves fully to Vercel.
 - [ ] Decide whether `SUD-Website-Template` remains standalone long-term or gets repurposed.
 - [ ] Decide what role, if any, the old `AddictionEd` repo should retain after cutover.
