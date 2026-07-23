@@ -9,7 +9,6 @@
 ## Active Tasks
 - [~] Maintain `sud-education-hub` as the clinician-facing SUD education destination while keeping `sud-patient-education` separate.
 - [~] Establish the one-topic-unit-at-a-time SUD redesign process and maintain its canonical audit/governance records.
-- [~] Replace the Psych Scheduler and five SUD FormSubmit clients with the verified shared private `website-feedback` GitHub Issues / Vercel service before the first topic rebuild. The production API is live at `https://all-website-feedback.vercel.app/api/feedback`; text, screenshot, origin-rejection, labels, assignment, and owner-notification checks passed.
 - [~] Audit the combined alcohol/benzodiazepines unit, including `phenobarbital-aws.html`, before any redesign. Use current ASAM, APA, American Academy of Addiction Psychiatry, and other appropriate authoritative sources for all content decisions.
 
 ## Upcoming
@@ -27,6 +26,7 @@
 - [x] Kept topic pages in separate folders instead of flattening the hub.
 - [x] Repointed the TroyMD dashboard Phenobarbital for AWS route to `sud-education-hub/alcohol-benzodiazepines/phenobarbital-aws.html`.
 - [x] Refactored Phenobarbital AWS ceiling/evidence wording in the legacy source before consolidation.
+- [x] Replaced the Psych Scheduler and all five SUD dashboard FormSubmit clients with the shared private `website-feedback` GitHub Issues / Vercel service. Production text, screenshot, origin-rejection, labels, assignment, and owner-notification checks passed; the live alcohol/benzodiazepines endpoint created private test issue #14.
 
 ## Backlog
 - [ ] Continue removing public-facing migration/source-repo language if it appears in topic pages.

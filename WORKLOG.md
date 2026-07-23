@@ -45,3 +45,9 @@ This file records completed Codex work sessions for SUD Education Hub. Append ne
 - In progress: Migrate and verify the Psych Scheduler feedback client, then replace the five SUD FormSubmit clients with the same `Feedback / IT Request` experience.
 - Blockers/notes: No infrastructure blocker. Three clearly marked live test issues (#10–#12) remain available to close or ignore in the private `website-feedback` inbox.
 
+### 2026-07-23 - Codex desktop - Alcohol/benzodiazepines audit start and shared feedback migration
+- Completed: Selected the combined alcohol/benzodiazepines unit as the first revamp unit, established the ASAM/APA/AAAP-first evidence standard for every later SUD unit, and created its initial audit record.
+- Completed: Routed Psych Scheduler and all five SUD dashboard feedback forms through the shared `Feedback / IT Request` client. GitHub Pages deployment succeeded; the live alcohol/benzodiazepines page and API created private verification issue #14 with the expected allowed origin.
+- In progress: Build the item-level content, source, UX, accessibility, and maintainability inventory for the active combined unit before any redesign.
+- Blockers/notes: The legacy inline FormSubmit code remains dormant beneath the dynamically replaced SUD forms and should be removed in a focused cleanup after the new flow has had ordinary use. Test issues #10–#14 are clearly labeled for closure or disregard.
+

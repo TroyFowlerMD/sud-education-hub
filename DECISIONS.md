@@ -81,3 +81,9 @@ Context: Existing educational pages may contain legacy material of mixed provena
 Decision: For each SUD unit, prioritize current applicable guidance from ASAM, APA, and AAAP; then use authoritative federal/regulatory sources such as SAMHSA, NIAAA, CDC, and FDA when relevant. Use primary peer-reviewed literature for questions those sources do not settle, and record source date, role, and evidence limitations in the site audit.
 Rationale: This keeps content review clinically reliable while avoiding unsupported certainty and stale guidance.
 Consequences: No content revision should rely only on the existing page or an unverified secondary source. The source standard applies to every later unit, not only alcohol/benzodiazepines.
+
+### 2026-07-23 - Use One Shared Static Client for SUD Feedback / IT Requests
+Context: The five SUD dashboards shared an unreliable FormSubmit pattern but remain static GitHub Pages documents with independent legacy markup.
+Decision: Load `assets/feedback-client.js` on each dashboard and replace its marked feedback container at runtime with the common `Feedback / IT Request` form. The client posts only to `https://all-website-feedback.vercel.app/api/feedback`, supports up to three PNG, JPEG, or WebP screenshots, and identifies the site area as the respective topic unit.
+Rationale: One small, version-controlled client keeps user-facing behavior, screenshot handling, privacy reminders, and error handling consistent without prematurely restructuring the individual topic pages.
+Consequences: All new SUD submissions use the private GitHub Issues inbox and its notifications. The old inline FormSubmit scripts are inert because the client replaces their forms, but a later focused cleanup should remove those now-dead scripts.
