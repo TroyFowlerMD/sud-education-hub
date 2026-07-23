@@ -63,3 +63,9 @@ Context: Dr. Fowler confirmed `website-feedback` for the shared feedback Vercel 
 Decision: The project may remain deployed for configuration and safe checks, but no production website will use the assigned hostname until Dr. Fowler explicitly accepts it or chooses a different final endpoint.
 Rationale: The project name is confirmed, while the automatically assigned public hostname differs from the expected name and is user-facing configuration.
 Consequences: The endpoint currently has no environment variables and returns `feedback_not_configured` for approved-origin submissions. Configure the narrowly scoped GitHub token only after the hostname decision, then verify the complete path before replacing FormSubmit.
+
+### 2026-07-23 - Preserve the Exact-Hostname Constraint
+Context: Dr. Fowler requested `website-feedback.vercel.app`; Vercel rejected that alias because it is already in use.
+Decision: Do not substitute `website-feedback-nine.vercel.app` or another unapproved Vercel hostname for production browser clients.
+Rationale: The endpoint name is user-facing and must remain under Dr. Fowler's control.
+Consequences: Keep the API deployed but unreferenced while choosing an acceptable alternative. This does not affect the later, separate decision about whether public SUD pages stay on GitHub Pages or migrate to Vercel.

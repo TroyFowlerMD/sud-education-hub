@@ -35,3 +35,8 @@ This file records completed Codex work sessions for SUD Education Hub. Append ne
 - In progress: Approve the usable public API hostname, configure the server-side fine-grained GitHub token, then migrate the Psych Scheduler and SUD browser clients.
 - Blockers/notes: Vercel assigned `website-feedback-nine.vercel.app`, not the expected `website-feedback.vercel.app`; no production client points there yet. The project has no environment variables, so the API is safely inactive until `GITHUB_FEEDBACK_TOKEN` is configured.
 
+### 2026-07-23 - Codex desktop - Feedback hostname and token activation follow-up
+- Completed: Verified that Vercel will not assign the requested `website-feedback.vercel.app` alias because it is already in use. Confirmed that no browser client has been migrated to the temporary Vercel hostname.
+- In progress: Create the approved one-year, fine-grained GitHub token restricted to `TroyFowlerMD/website-feedback`, then save it only as the production Vercel secret and verify a complete issue submission.
+- Blockers/notes: GitHub requires mobile/authenticator sudo confirmation before token creation. A browser tab is intentionally left at that confirmation step. Dr. Fowler must also choose a final alternative API hostname before client migration.
+
