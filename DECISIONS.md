@@ -49,8 +49,8 @@ Consequences: `docs/SUD_EDUCATION_REDESIGN.md` is the living process source; det
 ### 2026-07-23 - Establish One Private Website Feedback / IT Request Inbox
 Context: The SUD dashboards use FormSubmit email while Psych Scheduler already uses a Vercel API that creates private GitHub Issues with screenshot support.
 Decision: Create private `TroyFowlerMD/website-feedback` as the shared repository for all TroyMD website Feedback / IT Requests, API source, private screenshot storage, labels, and operator guidance. Migrate the full existing scheduler feedback history and replace the SUD FormSubmit integration.
-Rationale: One private inbox simplifies monitoring and triage while source/area/status labels retain site-level separation. Assigning new issues to Dr. Fowler preserves immediate GitHub email, web, and mobile notifications.
-Consequences: The feedback token remains server-side in Vercel; browser clients never receive it. FormSubmit becomes retired after verified migration. The nine legacy issues were moved on 2026-07-23; GitHub retained their text, comments, and state but did not retain their labels, so labels are a forward-looking service convention. A Vercel public project/hostname must be explicitly chosen before deployment.
+Rationale: One private inbox simplifies monitoring and triage while source/area/status labels retain site-level separation. A GitHub Actions mention on each new issue provides a GitHub web/app/email notification under the owner's normal notification settings.
+Consequences: The feedback token remains server-side in Vercel; browser clients never receive it. FormSubmit becomes retired after verified migration. The nine legacy issues were moved on 2026-07-23; GitHub retained their text, comments, and state but did not retain their labels, so labels are a forward-looking service convention.
 
 ### 2026-07-23 - Defer Full SUD Hosting Migration Until After the First Rebuilt Unit
 Context: The SUD hub is a working public GitHub Pages static site, while a shared Vercel API is needed for secure issue creation and screenshot storage.
@@ -58,14 +58,14 @@ Decision: Keep the SUD public host on GitHub Pages through the first topic rebui
 Rationale: This preserves the current public URL and avoids prematurely selecting a final public Vercel hostname while still enabling secure server-side feedback handling.
 Consequences: A later full-hosting decision must compare preview workflow, deployment/recovery behavior, URL continuity, and maintenance overhead, then obtain Dr. Fowler's explicit naming choice.
 
-### 2026-07-23 - Create the Shared Feedback Vercel Project, Pending Endpoint Approval
-Context: Dr. Fowler confirmed `website-feedback` for the shared feedback Vercel project. Vercel created the production project successfully but assigned `website-feedback-nine.vercel.app` rather than the expected unsuffixed hostname.
-Decision: The project may remain deployed for configuration and safe checks, but no production website will use the assigned hostname until Dr. Fowler explicitly accepts it or chooses a different final endpoint.
-Rationale: The project name is confirmed, while the automatically assigned public hostname differs from the expected name and is user-facing configuration.
-Consequences: The endpoint currently has no environment variables and returns `feedback_not_configured` for approved-origin submissions. Configure the narrowly scoped GitHub token only after the hostname decision, then verify the complete path before replacing FormSubmit.
+### 2026-07-23 - Activate the Shared Feedback API at the Approved Endpoint
+Context: Dr. Fowler confirmed `website-feedback` for the shared feedback Vercel project. `website-feedback.vercel.app` was unavailable, so he approved the attempted candidate order that produced `all-website-feedback.vercel.app`.
+Decision: Use `https://all-website-feedback.vercel.app/api/feedback` as the current production API endpoint. Store the one-year fine-grained GitHub token only as Vercel's production-only `GITHUB_FEEDBACK_TOKEN`; it is restricted to `TroyFowlerMD/website-feedback` with Issues and Contents read/write permissions. Disable Vercel Authentication for this API project so public website clients can reach it.
+Rationale: The API must be publicly reachable for browser clients while server-side origin allowlisting, rate limiting, deduplication, and the restricted token protect the private inbox.
+Consequences: Text, image-attachment, and rejected-origin production checks passed on 2026-07-23. New issues are private, assigned to Dr. Fowler, and receive a GitHub Actions `@TroyFowlerMD` notification. No existing browser client has been migrated yet.
 
-### 2026-07-23 - Preserve the Exact-Hostname Constraint
+### 2026-07-23 - Preserve the Endpoint Naming Constraint
 Context: Dr. Fowler requested `website-feedback.vercel.app`; Vercel rejected that alias because it is already in use.
-Decision: Do not substitute `website-feedback-nine.vercel.app` or another unapproved Vercel hostname for production browser clients.
+Decision: Do not use `website-feedback-nine.vercel.app`. Use the subsequently approved `all-website-feedback.vercel.app` endpoint until Dr. Fowler chooses a later naming change.
 Rationale: The endpoint name is user-facing and must remain under Dr. Fowler's control.
-Consequences: Keep the API deployed but unreferenced while choosing an acceptable alternative. This does not affect the later, separate decision about whether public SUD pages stay on GitHub Pages or migrate to Vercel.
+Consequences: This does not affect the separate later decision about whether public SUD pages stay on GitHub Pages or migrate to Vercel.

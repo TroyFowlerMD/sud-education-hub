@@ -9,7 +9,7 @@
 ## Active Tasks
 - [~] Maintain `sud-education-hub` as the clinician-facing SUD education destination while keeping `sud-patient-education` separate.
 - [~] Establish the one-topic-unit-at-a-time SUD redesign process and maintain its canonical audit/governance records.
-- [~] Verify the shared private `website-feedback` GitHub Issues / Vercel feedback service, then replace FormSubmit before the first topic rebuild. The private repository, API source, nine legacy feedback issues, and Vercel project are in place; `website-feedback.vercel.app` is unavailable, and an alternative production hostname plus the server-side GitHub token remain to be completed.
+- [~] Replace the Psych Scheduler and five SUD FormSubmit clients with the verified shared private `website-feedback` GitHub Issues / Vercel service before the first topic rebuild. The production API is live at `https://all-website-feedback.vercel.app/api/feedback`; text, screenshot, origin-rejection, labels, assignment, and owner-notification checks passed.
 
 ## Upcoming
 - [ ] Select the first topic unit for its detailed educational, technical, UX, and accessibility audit.

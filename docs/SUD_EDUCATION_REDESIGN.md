@@ -43,7 +43,7 @@ Before a substantial phase, record a material capability decision here when it c
 - Create private `TroyFowlerMD/website-feedback` as the common issue inbox, screenshot store, API source, and operator documentation for TroyMD websites.
 - The complete existing Psych Scheduler/JFK feedback history was migrated from `non-clinical-feedback` on 2026-07-23: nine issues, their open/closed state, and comments were retained. The existing private screenshot file was copied into this repository before transfer so its issue link continues to work. GitHub did not retain labels during the transfer; the shared service creates the current labels for all new requests.
 - Replace the five SUD dashboard FormSubmit forms with the shared service. The visible title is **Feedback / IT Request**.
-- The shared Vercel API creates private GitHub issues, stores accepted screenshots privately, and applies source/area/status labels. It will automatically assign each new issue to Dr. Fowler so GitHub email, web, and mobile notifications provide immediate notice.
+- The shared Vercel API at `https://all-website-feedback.vercel.app/api/feedback` creates private GitHub issues, stores accepted screenshots privately, and applies source/area/status labels. It assigns each issue to Dr. Fowler; a GitHub Actions mention from `github-actions[bot]` creates a GitHub web/app/email notification under the account's normal notification settings.
 - Screenshot support matches the current Psych Scheduler technical limits: PNG, JPEG, or WebP; up to three images; 1.5 MB each and 3.5 MB total.
 - Retain origin allowlisting, rate limiting, honeypot handling, deduplication, server-held credentials, and failure/retry behavior. No special clinical-image screening is required for this education-site feedback flow.
 
@@ -73,9 +73,9 @@ The initial units are opioids, alcohol/benzodiazepines, stimulants, cannabis, an
 - **Current phase:** repository orientation and cross-site feedback-platform foundation.
 - **Active topic unit:** none selected.
 - **Completed:** repository map, live-route smoke review, documentation audit, capability review, and redesign-process decisions.
-- **Completed deliverables:** repository orientation audit; living redesign document; private `website-feedback` repository and feedback API source; migration of nine legacy feedback issues; Vercel production project `website-feedback` deployed on 2026-07-23.
-- **Immediate next steps:** approve the production API hostname, configure its server-side GitHub token, then migrate and verify the Psych Scheduler and SUD FormSubmit clients before presenting topic-unit candidates for selection.
-- **Material blockers:** Vercel confirmed that `website-feedback.vercel.app` is already in use, and its assigned `website-feedback-nine.vercel.app` hostname has not been accepted as the final endpoint. Do not point production clients to either until Dr. Fowler chooses an acceptable alternative. `GITHUB_FEEDBACK_TOKEN` is also not configured; GitHub mobile/authenticator confirmation is required before the approved fine-grained token can be created.
+- **Completed deliverables:** repository orientation audit; living redesign document; private `website-feedback` repository and feedback API source; migration of nine legacy feedback issues; Vercel production project `website-feedback` live at `all-website-feedback.vercel.app`; one-year, repository-restricted GitHub token stored only as a production Vercel secret; verified private text and screenshot issues plus rejected-origin behavior; GitHub Actions owner-notification workflow.
+- **Immediate next steps:** migrate and verify the Psych Scheduler client, then the five SUD FormSubmit clients, before presenting topic-unit candidates for selection.
+- **Material blockers:** no infrastructure blocker. `website-feedback.vercel.app` remains unavailable; production clients must use the approved `all-website-feedback.vercel.app` endpoint until a later naming decision changes it.
 
 ## Maintenance rules
 

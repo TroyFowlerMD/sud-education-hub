@@ -40,3 +40,8 @@ This file records completed Codex work sessions for SUD Education Hub. Append ne
 - In progress: Create the approved one-year, fine-grained GitHub token restricted to `TroyFowlerMD/website-feedback`, then save it only as the production Vercel secret and verify a complete issue submission.
 - Blockers/notes: GitHub requires mobile/authenticator sudo confirmation before token creation. A browser tab is intentionally left at that confirmation step. Dr. Fowler must also choose a final alternative API hostname before client migration.
 
+### 2026-07-23 - Codex desktop - Shared feedback API activation and notification verification
+- Completed: Activated `https://all-website-feedback.vercel.app/api/feedback` with a production-only, repository-restricted GitHub token; disabled Vercel Authentication for this public API endpoint; verified a private text issue, private screenshot issue, and `403 origin_not_allowed` rejection. Added and verified the `github-actions[bot]` owner-mention notification workflow.
+- In progress: Migrate and verify the Psych Scheduler feedback client, then replace the five SUD FormSubmit clients with the same `Feedback / IT Request` experience.
+- Blockers/notes: No infrastructure blocker. Three clearly marked live test issues (#10–#12) remain available to close or ignore in the private `website-feedback` inbox.
+
