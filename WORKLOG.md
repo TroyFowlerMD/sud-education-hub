@@ -24,3 +24,9 @@ This file records completed Codex work sessions for SUD Education Hub. Append ne
 - In progress: Existing SUD Education Hub tasks remain unchanged.
 - Blockers/notes: Instruction-only change; no app runtime code changed.
 
+### 2026-07-23 - Codex desktop - Redesign orientation and shared feedback foundation
+- Completed: Verified clean, synchronized `main`; mapped the static GitHub Pages routes, five topic revamp units, shared dashboard patterns, canonical documentation status, and available capabilities.
+- Completed: Added the living SUD redesign process document and detailed repository-orientation audit; recorded one-unit workflow, feedback-platform, and staged-hosting decisions. Created private `TroyFowlerMD/website-feedback`, added its Vercel feedback API source, copied the legacy private screenshot asset, and migrated all nine existing scheduler/JFK feedback issues with their state and discussions.
+- In progress: Deploy the shared service, configure its server-side GitHub permissions, migrate Psych Scheduler and SUD FormSubmit clients, then select the first topic rebuild.
+- Blockers/notes: No topic unit is selected. A Vercel public project/hostname must be chosen before the shared API can be deployed; full SUD hosting remains on GitHub Pages pending first-unit comparison.
+

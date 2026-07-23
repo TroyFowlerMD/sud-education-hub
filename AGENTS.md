@@ -25,6 +25,8 @@
 - docs/addictioned-sud-training-hub.md
 - docs/addictioned-sud-training-hub-legacy-snapshot.md
 - docs/phenobarbital-aws-reference-refactor.md
+- docs/SUD_EDUCATION_REDESIGN.md
+- docs/audits/repository-orientation.md
 
 ## Required Startup Routine
 1. Run git status --short --branch in the repo root and confirm the branch sync state with origin.

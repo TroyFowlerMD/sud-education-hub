@@ -39,3 +39,21 @@ Context: Dr. Fowler wants Codex to notice chances to make his coding, GitHub, Gi
 Decision: When Codex sees a practical workflow improvement, it should present the opportunity proactively with the expected benefit, any risk or cost, and the smallest safe next step.
 Rationale: Small workflow improvements compound, especially while Dr. Fowler is learning Git and using Codex across multiple machines.
 Consequences: Future sessions should separate optional workflow suggestions from required task work so recommendations help without derailing the current task.
+
+### 2026-07-23 - Use a One-Topic-Unit-At-a-Time SUD Redesign Process
+Context: The consolidated hub contains several substantial dashboards with different clinical scopes and shared legacy patterns.
+Decision: Maintain repository-wide orientation and common infrastructure, but perform complete educational and interface redesigns one topic unit at a time. Keep alcohol and benzodiazepines combined, including the phenobarbital AWS reference, unless Dr. Fowler explicitly changes that boundary.
+Rationale: A focused unit makes curriculum, pathway, architecture, and verification choices reviewable without attempting a simultaneous wholesale revamp.
+Consequences: `docs/SUD_EDUCATION_REDESIGN.md` is the living process source; detailed evidence belongs in `docs/audits/`; no first unit is selected until Dr. Fowler chooses one.
+
+### 2026-07-23 - Establish One Private Website Feedback / IT Request Inbox
+Context: The SUD dashboards use FormSubmit email while Psych Scheduler already uses a Vercel API that creates private GitHub Issues with screenshot support.
+Decision: Create private `TroyFowlerMD/website-feedback` as the shared repository for all TroyMD website Feedback / IT Requests, API source, private screenshot storage, labels, and operator guidance. Migrate the full existing scheduler feedback history and replace the SUD FormSubmit integration.
+Rationale: One private inbox simplifies monitoring and triage while source/area/status labels retain site-level separation. Assigning new issues to Dr. Fowler preserves immediate GitHub email, web, and mobile notifications.
+Consequences: The feedback token remains server-side in Vercel; browser clients never receive it. FormSubmit becomes retired after verified migration. The nine legacy issues were moved on 2026-07-23; GitHub retained their text, comments, and state but did not retain their labels, so labels are a forward-looking service convention. A Vercel public project/hostname must be explicitly chosen before deployment.
+
+### 2026-07-23 - Defer Full SUD Hosting Migration Until After the First Rebuilt Unit
+Context: The SUD hub is a working public GitHub Pages static site, while a shared Vercel API is needed for secure issue creation and screenshot storage.
+Decision: Keep the SUD public host on GitHub Pages through the first topic rebuild and use Vercel only for the shared feedback service. Reassess full Vercel hosting after a rebuilt unit can be compared in a real preview workflow.
+Rationale: This preserves the current public URL and avoids prematurely selecting a final public Vercel hostname while still enabling secure server-side feedback handling.
+Consequences: A later full-hosting decision must compare preview workflow, deployment/recovery behavior, URL continuity, and maintenance overhead, then obtain Dr. Fowler's explicit naming choice.

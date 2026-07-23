@@ -38,3 +38,8 @@ Clinician-facing substance use disorder education hub for residents, fellows, an
 - `docs/addictioned-sud-training-hub.md`: Original AddictionEd/SUD topic hub context.
 - `docs/addictioned-sud-training-hub-legacy-snapshot.md`: Consolidation-era AddictionEd legacy-source snapshot.
 - `docs/phenobarbital-aws-reference-refactor.md`: Phenobarbital AWS evidence/ceiling language refactor note.
+
+## Redesign Initiative
+
+- `docs/SUD_EDUCATION_REDESIGN.md`: Canonical living process, decisions, open questions, and current state for the one-topic-unit-at-a-time redesign.
+- `docs/audits/`: Detailed repository and future topic-specific audits. Start with `docs/audits/repository-orientation.md` for the current architecture and documentation review.
