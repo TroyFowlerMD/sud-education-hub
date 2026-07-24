@@ -37,7 +37,7 @@ Record the source, publication or update date, and what the source supports in e
 ## Capability guidance
 
 - **Browser control:** recommended for every rendered-site review, responsive/accessibility check, and deployment verification.
-- **Visualize:** consider only when competing learner pathways, presentation modes, information architectures, or progressive-disclosure patterns need a tangible comparison. Outputs are planning artifacts, not production authority.
+- **Visualize:** defer until content disposition, learner-level mapping, and viable information-architecture options exist; then use it to compare guided presenter and independent-reference flows. Outputs are planning artifacts, not production authority.
 - **GitHub tools:** use for repository, issue, history, and feedback-inbox work.
 - **Vercel capabilities:** use for the shared feedback API and later hosting comparison. A full hosting migration is not approved until after the first rebuilt topic unit is reviewed.
 - **Site-building/prototype tools:** use only for a contained experiment when a real design question cannot be resolved by the repository implementation and visual comparison alone.
@@ -64,7 +64,7 @@ The initial units are opioids, alcohol/benzodiazepines, stimulants, cannabis, an
 | 2026-07-23 | Final | Use one-topic-unit-at-a-time redesigns. | No simultaneous wholesale dashboard rebuilds. |
 | 2026-07-23 | Final | Use `website-feedback` as one private inbox for all TroyMD website Feedback / IT Requests. | Shared labels, issue filters, screenshots, and owner notifications are required. |
 | 2026-07-23 | Final | Keep SUD on GitHub Pages through the first rebuilt unit. | Use Vercel for the feedback API now; revisit full hosting after a real rebuilt-unit comparison. |
-| 2026-07-23 | Working hypothesis | Visualize is decision-triggered. | Use it for competing teaching/IA choices, not by default. |
+| 2026-07-23 | Working hypothesis | Visualize is decision-triggered. | Defer it until content review and PGY mapping produce viable options; then compare a guided, potentially Prezi-like presenter flow with independent-reference mode. |
 | 2026-07-23 | Final | Audit alcohol and benzodiazepines first, using an authoritative-source standard for this and every later unit. | Keep the combined boundary; prioritize current ASAM, APA, and AAAP guidance, then authoritative federal/regulatory sources and primary literature as needed. |
 
 ## Open questions
@@ -76,11 +76,11 @@ The initial units are opioids, alcohol/benzodiazepines, stimulants, cannabis, an
 
 ## Current phase and active site
 
-- **Current phase:** alcohol/benzodiazepines deep audit and research preparation.
+- **Current phase:** alcohol/benzodiazepines audit baseline complete; item-level disposition and clinical sign-off remain.
 - **Active topic unit:** combined alcohol and benzodiazepines, including `phenobarbital-aws.html`.
 - **Completed:** repository map, live-route smoke review, documentation audit, capability review, and redesign-process decisions.
 - **Completed deliverables:** repository orientation audit; living redesign document; private `website-feedback` repository and feedback API source; migration of nine legacy feedback issues; Vercel production project `website-feedback` live at `all-website-feedback.vercel.app`; one-year, repository-restricted GitHub token stored only as a production Vercel secret; verified private text and screenshot issues plus rejected-origin behavior; GitHub Actions owner-notification workflow.
-- **Immediate next steps:** complete the rendered/code/content inventory and source-backed audit for the active unit. Use the output to map PGY-1 and PGY-3 objectives before comparing pathway or interface options.
+- **Immediate next steps:** complete item-level keep/update/remove and PGY-1/PGY-3 classification, then dated-source review and clinical sign-off for high-stakes claims and calculators before comparing pathway or interface options.
 - **Material blockers:** no infrastructure blocker. `website-feedback.vercel.app` remains unavailable; production clients must use the approved `all-website-feedback.vercel.app` endpoint until a later naming decision changes it.
 
 ## Maintenance rules

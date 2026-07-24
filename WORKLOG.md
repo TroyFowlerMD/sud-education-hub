@@ -51,3 +51,8 @@ This file records completed Codex work sessions for SUD Education Hub. Append ne
 - In progress: Build the item-level content, source, UX, accessibility, and maintainability inventory for the active combined unit before any redesign.
 - Blockers/notes: The legacy inline FormSubmit code remains dormant beneath the dynamically replaced SUD forms and should be removed in a focused cleanup after the new flow has had ordinary use. Test issues #10–#14 are clearly labeled for closure or disregard.
 
+### 2026-07-23 - Codex desktop - Alcohol/benzodiazepines audit baseline
+- Completed: Recorded the combined-unit inventory, authoritative source/claim crosswalk, rendered technical/UX/accessibility findings, PGY-1/PGY-3 objective map, high-stakes risks, and decision gates in durable project documentation.
+- In progress: Item-level keep/update/remove and learner-level classification, followed by dated-source verification and clinical sign-off for high-stakes content.
+- Blockers/notes: Visualize is intentionally deferred until those reviews produce concrete guided-presenter and independent-reference options. No educational-page, design, hosting, or public-site content changed.
+

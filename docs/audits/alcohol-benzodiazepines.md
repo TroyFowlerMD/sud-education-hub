@@ -3,57 +3,87 @@
 ## Status
 
 - **Unit:** combined alcohol and benzodiazepines, including `alcohol-benzodiazepines/phenobarbital-aws.html`.
-- **Phase:** deep audit and research preparation; no redesign or educational-content revision has been approved.
-- **Rendered review:** initial live review completed 2026-07-23.
+- **Phase:** audit baseline complete; item-level disposition and clinical sign-off remain before design or educational-content changes.
+- **Rendered review:** completed 2026-07-23 with browser control at desktop and mobile widths.
 - **Purpose:** establish a source-backed inventory and identify what requires detailed verification before any curriculum, UX, or implementation choice.
+
+The dashboard and reference are intentionally treated as one learning unit. This audit does not recommend splitting them before the content, learner-level, and presentation decisions are made.
 
 ## Current product inventory
 
 | Surface | Current role | Notable functionality |
 | --- | --- | --- |
-| `alcohol-benzodiazepines/index.html` | Combined educational dashboard | 5-category, 32-subtopic knowledge tree; Explore and Activities modes; search, theme toggle, print view, clinical cases/quizzes, CIWA-Ar calculator, benzodiazepine equivalency converter, standard-drinks calculator, and medication quick reference. |
-| `alcohol-benzodiazepines/phenobarbital-aws.html` | Standalone clinical reference | Phenobarbital pharmacology, protocol comparison, 72-hour cumulative-dose calculator, comparative evidence, safety, and guideline summary. |
+| `alcohol-benzodiazepines/index.html` | Combined educational dashboard | 5-category, 32-subtopic knowledge tree; Explore and Activities modes; search, theme toggle, print view, clinical cases/quizzes, CIWA-Ar calculator, benzodiazepine-equivalency converter, standard-drinks calculator, medication quick reference, and feedback. |
+| `alcohol-benzodiazepines/phenobarbital-aws.html` | Standalone clinical reference | Phenobarbital pharmacology, protocol comparison, 72-hour cumulative-dose calculator, editable dose log, comparative evidence, safety, and guideline summary. |
 
-The dashboard and reference are both live. They should remain grouped for the redesign, but the phenobarbital reference needs its own high-stakes evidence and calculator verification track.
+Together, the two self-contained HTML/JavaScript surfaces are approximately 324 KB. Each embeds most content, style, data, and interaction logic in place.
 
-## Initial technical and UX findings
+### Dashboard content inventory
 
-- Both surfaces are self-contained static HTML files with embedded CSS, content, and JavaScript; the dashboard is approximately 270 KB and the phenobarbital reference approximately 54 KB. This makes changes easy to publish but difficult to review, test, reuse, and maintain.
-- The dashboard combines foundational material, advanced inpatient management, reference calculations, and activities in one navigation model. It does not yet distinguish PGY-1 versus PGY-3 paths or presenter versus independent-learning paths.
-- The dashboard has a substantial interactive footprint, but its feedback form still uses the legacy FormSubmit integration. It will be migrated to the shared image-capable GitHub Issues service as repository infrastructure work, without treating that as a redesign.
-- The rendered dashboard is navigable and exposes its main functions, but its content-dense knowledge tree, multiple utility controls, and unstructured category sequence need a later focused accessibility, mobile, keyboard, and lecture-flow review.
-- The phenobarbital page clearly labels its 20–30 mg/kg cumulative figure as practice-based rather than guideline-endorsed. That framing is a strength, but the calculator, exact protocol values, source provenance, and clinical guardrails require independent verification before any reliance or redesign.
-
-## Initial content-risk register
-
-These are audit questions, not conclusions or content changes.
-
-| Priority | Topic needing verification | Why it matters |
-| --- | --- | --- |
-| High | Alcohol withdrawal severity, disposition, symptom scales, and medication pathways | The dashboard includes numerical thresholds and management recommendations that must align with current ASAM guidance and clear limits of CIWA-Ar use. |
-| High | Benzodiazepine tapering, withdrawal, equivalency, and conversion tool | The current official source is the 2025 Joint Clinical Practice Guideline on Benzodiazepine Tapering; equivalency tables and taper decisions require explicit uncertainty and patient-specific safeguards. |
-| High | Phenobarbital protocols and cumulative-dose calculator | A calculation may be interpreted as bedside dosing advice. Each reference protocol, its population, route, monitoring setting, and limit must be traceable. |
-| High | Alcohol pharmacotherapy selection | The dashboard cites “APA 2023,” whereas APA’s current listed pharmacological AUD guideline is 2018. Treatment claims need a source-by-source refresh rather than a blanket citation. |
-| Medium | Categorical language about long-term benzodiazepines in AUD | The page should distinguish general risk, withdrawal treatment, and an otherwise-indicated co-occurring condition rather than rely on unsupported absolutes. |
-| Medium | Neurobiology, prognosis, and stigma statistics | Numerous precise claims appear in expandable content; they need source attribution or appropriately qualified qualitative wording. |
-
-## Source register for this unit
-
-Use the following sources first. Record the relevant recommendation and publication/update date alongside every high-stakes claim considered for revision.
-
-| Source | Role in the audit |
+| Category | Subtopics |
 | --- | --- |
-| [ASAM Clinical Practice Guideline on Alcohol Withdrawal Management (2020)](https://www.asam.org/quality-care/clinical-guidelines/alcohol-withdrawal-management-guideline) | Primary source for alcohol-withdrawal assessment, level of care, medication approach, monitoring, and phenobarbital recommendation boundaries. |
-| [Joint Clinical Practice Guideline on Benzodiazepine Tapering (2025)](https://downloads.asam.org/sitefinity-production-blobs/docs/default-source/guidelines/benzodiazepine-tapering-2025/bzd-tapering-document---final-approved-version-for-distribution-02-28-25.pdf) | Primary source for safe tapering, withdrawal risk, individualized pace, care settings, and limits of dose-equivalence conversion. |
-| [APA guideline index: Pharmacological Treatment of Patients With Alcohol Use Disorder (2018)](https://www.psychiatry.org/psychiatrists/practice/clinical-practice-guidelines) | Primary psychiatric guideline source for AUD medication selection and contraindication framing. |
-| [AAAP educational opportunities and collaborations](https://www.aaap.org/education/educational-opportunities/) | Addiction-psychiatry education and competency context; use where it provides relevant curricular framing, not as a substitute for a clinical guideline. |
-| [NIAAA Alcohol Treatment Navigator for healthcare professionals](https://alcoholtreatment.niaaa.nih.gov/healthcare-professionals) | Federal source for evidence-based care and referral framing. |
-| [FDA benzodiazepine boxed-warning update](https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class) | Regulatory source for class risks, gradual discontinuation, and alcohol/opioid co-use warnings. |
+| Clinical Withdrawal Syndromes | Alcohol withdrawal syndrome; benzodiazepine withdrawal; delirium tremens; withdrawal seizures; combined alcohol and benzodiazepine withdrawal |
+| Neurobiology | GABA-A; glutamate/NMDA; allostasis and opponent process; reward circuitry; neuroinflammation; cross-tolerance; kindling |
+| Acute Management | Symptom-triggered versus fixed dosing; benzodiazepine selection; phenobarbital; thiamine and nutrition; special populations; ASAM levels of care |
+| Long-term Treatment / Medications | Naltrexone; acamprosate; disulfiram; gabapentin; topiramate; off-label treatment; psychosocial care |
+| Recovery and Stigma | Natural history; brain recovery; post-acute withdrawal; harm reduction; recovery capital; outcomes; stigma |
 
-## Next audit steps
+Teaching activities include 75 Jeopardy-style questions across three difficulty levels, five clinical cases, eight pharmacotherapy scenarios, 12 myth checks, and flashcards derived from the activities. Interactive tools include CIWA-Ar, benzodiazepine-equivalency, standard-drink, and medication-reference tools, plus search, theme, print, and feedback functions.
 
-1. Create a complete, item-level content inventory for the dashboard and phenobarbital reference.
-2. Map each high-stakes claim, algorithm, calculator input/output, and cited guideline to an authoritative source.
-3. Complete rendered keyboard, responsive, presentation-flow, and accessible-name review.
-4. Define draft PGY-1 and PGY-3 learning objectives before choosing an information architecture.
-5. Consider Visualize only when there are concrete pathway or information-architecture alternatives to compare.
+## Source and claim crosswalk
+
+| Claim area | Primary hierarchy | Baseline finding and required later handling |
+| --- | --- | --- |
+| Alcohol-withdrawal severity, disposition, and CIWA-Ar use | ASAM Alcohol Withdrawal Management Guideline (2020) | Reconcile every threshold and calculator instruction. ASAM example bands are mild CIWA-Ar less than 10, moderate 10 to 18, and severe 19 or greater; the current dashboard bands do not consistently align. |
+| Benzodiazepine tapering and conversion | Joint Clinical Practice Guideline on Benzodiazepine Tapering (2025) | Treat dose equivalents as approximate and patient-specific, not a precise converter. Reframe categorical cross-taper language as individualized and monitored; initial reductions are generally 5 to 10 percent, with schedules adjusted to response. |
+| AUD pharmacotherapy | APA pharmacologic AUD guideline (2018); NIAAA medication overview; FDA labeling as needed | Correct the dashboard provenance that calls the APA guideline “2023.” Revalidate every dose, contraindication, monitoring statement, and off-label designation. |
+| Benzodiazepine safety | FDA class boxed-warning update | Preserve alcohol/opioid co-use, dependence, gradual taper, and patient-specific schedule safety framing. |
+| Phenobarbital | ASAM 2020; institutional protocol where applicable; primary literature including Wolpaw et al. (2025) and Lee et al. ED systematic review (2024) | Separate guideline-supported boundaries from local protocol and observational findings. The 20 to 30 mg/kg headroom calculator is a high-risk educational aid, not a universal guideline ceiling. |
+| Addiction-psychiatry learning context | AAAP AUD educational activity | Use only for curriculum context; it is not clinical management guidance. |
+
+### Clinical-source register
+
+- [ASAM Alcohol Withdrawal Management Guideline (2020)](https://www.asam.org/quality-care/clinical-guidelines/alcohol-withdrawal-management-guideline)
+- [Joint Clinical Practice Guideline on Benzodiazepine Tapering (2025)](https://www.asam.org/quality-care/clinical-guidelines/benzodiazepine-tapering)
+- [APA clinical practice guideline index](https://www.psychiatry.org/psychiatrists/practice/clinical-practice-guidelines)
+- [NIAAA medication overview](https://www.niaaa.nih.gov/health-professionals-communities/alcohol-interventions-young-adults-healthcare-professionals)
+- [FDA benzodiazepine boxed-warning update](https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class)
+- [Wolpaw et al. (2025) phenobarbital implementation study](https://pubmed.ncbi.nlm.nih.gov/40853658/)
+- [Lee et al. emergency-department phenobarbital systematic review](https://pubmed.ncbi.nlm.nih.gov/37923363/)
+- [AAAP AUD educational activity](https://education.aaap.org/Public/Catalog/Details.aspx?id=WU%2FSj5SOC0LtamCBwLoI0A%3D%3D)
+
+## Technical, UX, and accessibility findings
+
+- The dashboard’s dense navigation, 32 expandable topics, embedded teaching activities, and inline tools make individual claims hard to review, test, cite, or sequence by learner level.
+- At a 375 px rendered viewport, both pages show horizontal overflow or clipped top navigation. The dashboard header clips controls; the phenobarbital navigation and large protocol table scroll horizontally without strong affordance.
+- The dashboard has no page-level `h1` or `main` landmark. Several tool controls, including search and calculator inputs, lack programmatic labels. Custom modal overlays require a later keyboard, focus-trap, Escape, and focus-return audit.
+- The phenobarbital page has a useful `h1` and heading hierarchy but no `main` landmark. Editable dose-log fields lack labels; its dosing table lacks a caption; and the click-to-edit dose entries are mouse-oriented.
+- The live Feedback / IT Request client renders successfully. A legacy FormSubmit endpoint and related source code remain dormant in the dashboard source and should be removed or isolated only during later approved cleanup.
+
+## Learner-objective map
+
+| Learner level | Objectives |
+| --- | --- |
+| PGY-1 | Recognize alcohol and benzodiazepine withdrawal risk; use structured assessment within its limits; identify first-line treatment and escalation; explain AUD medications and benzodiazepine safety; apply stigma-aware, recovery-oriented care. |
+| PGY-3 | Manage diagnostic ambiguity and co-occurring conditions; individualize tapering and medication selection; critique evidence; apply monitored severe-withdrawal and phenobarbital boundaries; lead safe escalation and teaching discussions. |
+
+## Risks requiring independent review
+
+- High stakes: all withdrawal thresholds, disposition criteria, medication dose/contraindication/monitoring claims, benzodiazepine equivalents, cross-taper statements, phenobarbital protocols, calculator inputs and outputs, and numeric outcome claims.
+- Do not treat the page’s current calculators as point-of-care decision support until institutional ownership, intended use, validation, and clinician sign-off are determined.
+- Cite numeric claims to accessible published abstracts or use direction-and-magnitude language when a traceable numeric source is unavailable.
+
+## Decision points before architecture or design
+
+1. Decide which calculators remain educational demonstrations, become clearly non-actionable references, or are removed pending institutional protocol ownership.
+2. Complete item-level keep, update, remove, and PGY-1/PGY-3 classification before deciding between combined versus separate sites, layered content, or a learner-level switch.
+3. Decide whether the future surface should offer a guided presenter sequence, an independent reference mode, or both.
+4. Defer Visualize until content disposition, learner-level mapping, and viable information-architecture options exist. At that point, use it to compare learner and presenter flows, including a possible Prezi-like guided sequence, rather than as a premature design exercise.
+5. Require independent source review and clinical sign-off for each high-stakes threshold, dose, equivalency, calculator output, or medication recommendation.
+
+## Baseline-complete next steps
+
+1. Crosswalk every high-stakes claim and each calculator input/output to a dated source, labeled guideline, regulatory source, institutional protocol, observational evidence, or unsupported claim.
+2. Complete the item-level keep, update, remove, and PGY-1/PGY-3 classification for the 32 subtopics, teaching activities, and tools.
+3. Test any later changes at 320 px and desktop widths; verify keyboard order, modal focus/Escape/return behavior, labels, landmarks, tables, contrast, print output, internal links, and calculator boundary cases.
+4. Do not edit educational content, redesign, publish, or alter hosting until those reviews and decision points are complete.
