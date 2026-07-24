@@ -62,3 +62,9 @@ This file records completed Codex work sessions for SUD Education Hub. Append ne
 - In progress: Import and verify the workbook as native Google Sheets, then begin owner item-level review and the dated source-to-claim crosswalk.
 - Blockers/notes: The direct Google Drive spreadsheet importer is not exposed in this session, so native import and true Google checkbox verification remain pending. No educational page, calculator, hosting, or public-site content changed.
 
+### 2026-07-24 - Codex desktop - Native alcohol/benzodiazepines review workbook
+- Completed: Created the private native Google Sheets workbook in the dedicated `SUD Education Hub` Drive folder, confirmed all six planned tabs, and visually checked the imported layout.
+- Completed: Converted the review, accept-draft, needs-discussion, and high-stakes verification fields to native clickable Google Sheets checkboxes.
+- In progress: Owner item-level keep/update/remove and PGY-1/PGY-3 decisions, then Codex's dated source-to-claim/link crosswalk and independent clinical sign-off.
+- Blockers/notes: No workbook infrastructure blocker remains. No educational page, calculator, hosting, or public-site content changed.
+

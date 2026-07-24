@@ -80,7 +80,7 @@ Add a compact orientation before the 32 audited topics, rather than a content-he
 
 ## Decision workbook and citation assurance
 
-The prepared review workbook contains a PGY-1 epidemiology foundation plus the 32-topic map, teaching activities, tools/calculators, high-stakes source crosswalk, and a decision dashboard. It uses a custom-answer field on every decision row; dropdowns for single-select decisions; and review, accept-draft, and needs-discussion controls. Repository documentation remains canonical. The workbook must be imported as native Google Sheets and visually verified before owner review begins.
+The native Google Sheets review workbook contains a PGY-1 epidemiology foundation plus the 32-topic map, teaching activities, tools/calculators, high-stakes source crosswalk, and a decision dashboard. It uses a custom-answer field on every decision row; dropdowns for single-select decisions; and clickable review, accept-draft, and needs-discussion controls. It was visually verified after native import. Repository documentation remains canonical.
 
 Codex owns the following before any approved content is published: verify the cited source supports the exact claim; record source type and update/publication date; verify the direct link opens to the intended source; verify citation placement in the rendered page; and flag inaccessible, stale, conflicting, paywalled, or unsupported sources. Clinical sign-off remains a separate requirement.
 

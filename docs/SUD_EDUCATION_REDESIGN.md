@@ -95,8 +95,8 @@ The initial units are opioids, alcohol/benzodiazepines, stimulants, cannabis, an
 - **Active topic unit:** combined alcohol and benzodiazepines, including `phenobarbital-aws.html`.
 - **Completed:** repository map, live-route smoke review, documentation audit, capability review, and redesign-process decisions.
 - **Completed deliverables:** repository orientation audit; living redesign document; private `website-feedback` repository and feedback API source; migration of nine legacy feedback issues; Vercel production project `website-feedback` live at `all-website-feedback.vercel.app`; one-year, repository-restricted GitHub token stored only as a production Vercel secret; verified private text and screenshot issues plus rejected-origin behavior; GitHub Actions owner-notification workflow.
-- **Immediate next steps:** import and verify the prepared native Google Sheets workbook, then complete item-level keep/update/remove and PGY-1/PGY-3 classification. Follow with dated source-to-claim and link verification, then clinical sign-off for high-stakes claims and calculators before comparing pathway or interface options.
-- **Material blockers:** the direct Google Drive spreadsheet importer is not exposed in the current Codex session, so the locally verified workbook is awaiting native Google Sheets import. `website-feedback.vercel.app` remains unavailable; production clients must use the approved `all-website-feedback.vercel.app` endpoint until a later naming decision changes it.
+- **Immediate next steps:** complete item-level keep/update/remove and PGY-1/PGY-3 classification in the native Google Sheets workbook. Follow with dated source-to-claim and link verification, then clinical sign-off for high-stakes claims and calculators before comparing pathway or interface options.
+- **Material blockers:** no workbook infrastructure blocker remains. `website-feedback.vercel.app` remains unavailable; production clients must use the approved `all-website-feedback.vercel.app` endpoint until a later naming decision changes it.
 
 ## Maintenance rules
 
