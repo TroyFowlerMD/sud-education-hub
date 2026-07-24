@@ -56,3 +56,9 @@ This file records completed Codex work sessions for SUD Education Hub. Append ne
 - In progress: Item-level keep/update/remove and learner-level classification, followed by dated-source verification and clinical sign-off for high-stakes content.
 - Blockers/notes: Visualize is intentionally deferred until those reviews produce concrete guided-presenter and independent-reference options. No educational-page, design, hosting, or public-site content changed.
 
+### 2026-07-24 - Codex desktop - Alcohol/benzodiazepines decision-workbook and workflow safeguard
+- Completed: Added the canonical Workflow checkpoint cadence, Codex-owned citation/link verification standard, compact PGY-1 epidemiology foundation, and companion decision-workbook governance to the project records.
+- Completed: Prepared and visually verified a Google Sheets-ready review workbook with the epidemiology foundation, 32-topic preliminary map, activities, tools/calculators, high-stakes source crosswalk, direct source URLs, and decision dashboard.
+- In progress: Import and verify the workbook as native Google Sheets, then begin owner item-level review and the dated source-to-claim crosswalk.
+- Blockers/notes: The direct Google Drive spreadsheet importer is not exposed in this session, so native import and true Google checkbox verification remain pending. No educational page, calculator, hosting, or public-site content changed.
+

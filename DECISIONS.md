@@ -93,3 +93,15 @@ Context: The initial source, rendered, technical, UX, accessibility, and learner
 Decision: Keep the unit combined while completing item-level content disposition and clinical review. Defer Visualize and architecture exploration until each item is classified for keep/update/remove and PGY-1/PGY-3 use, with viable guided-presenter and independent-reference options available for comparison.
 Rationale: Withdrawal, cross-tolerance, tapering, and phenobarbital boundaries are clinically interconnected; splitting the unit before item-level review would impose an unsupported information architecture. Visualize will be more useful after real content and teaching-mode options exist.
 Consequences: No educational content, calculator behavior, page design, hosting, or public route changes occur in this audit phase. High-stakes thresholds, doses, equivalents, and calculator outputs require a dated-source crosswalk and clinical sign-off before reuse.
+
+### 2026-07-24 - Make the Redesign Workflow Visible and Durable
+Context: Dr. Fowler asked for a safeguard against losing the ordered redesign process during long, multi-topic conversations and future Codex sessions.
+Decision: `docs/SUD_EDUCATION_REDESIGN.md` remains the canonical order-of-operations record. Every other substantive user-facing Codex reply must begin with a Workflow checkpoint; alternating replies must state that the next reply will include one. Real milestones, decisions, scope changes, and blockers update durable records, while ordinary chat cadence does not create Git churn.
+Rationale: A visible, recurring state check makes it easier to catch drift before it becomes project work and allows a future session to reconstruct the active gate without relying on chat context.
+Consequences: `AGENTS.md` carries the enforceable session rule; the redesign document, task list, worklog, and decisions are reconciled at genuine milestones.
+
+### 2026-07-24 - Use a Companion Decision Workbook and Codex-Owned Citation Verification
+Context: The alcohol/benzodiazepines unit needs many owner decisions across 32 topics, activities, tools, learner levels, overlap, and high-stakes sources.
+Decision: Use a native Google Sheets review workbook as the interactive owner-decision surface while keeping repository documentation canonical. Include a compact PGY-1 epidemiology foundation before the 32 audited topics. Codex owns source-to-claim, direct-link, date, evidence-type, and rendered-citation verification before approval or publication; clinical sign-off remains distinct.
+Rationale: The workbook supports asynchronous review with dropdowns, binary controls, and free-text answers, while repository records preserve cross-machine governance. Assigning technical/evidence verification to Codex prevents an unsafe transfer of that work to Dr. Fowler.
+Consequences: No high-stakes claim is considered reviewed merely because it has a citation. It must have a source record, accessible direct link, claim-support verification, appropriate nearby linked placement, and any required clinical sign-off.

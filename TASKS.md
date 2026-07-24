@@ -8,8 +8,8 @@
 
 ## Active Tasks
 - [~] Maintain `sud-education-hub` as the clinician-facing SUD education destination while keeping `sud-patient-education` separate.
-- [~] Establish the one-topic-unit-at-a-time SUD redesign process and maintain its canonical audit/governance records.
-- [~] Alcohol/benzodiazepines audit baseline is complete for `alcohol-benzodiazepines/index.html` and `phenobarbital-aws.html`. Next: item-level keep/update/remove and PGY-1/PGY-3 classification, dated-source crosswalk for high-stakes claims/calculators, and clinical sign-off before architecture exploration or educational-content changes.
+- [~] Establish the one-topic-unit-at-a-time SUD redesign process and maintain its canonical audit/governance records, including the every-other-message Workflow checkpoint cadence and Codex-owned citation/link verification.
+- [~] Alcohol/benzodiazepines audit baseline and decision workbook are prepared for `alcohol-benzodiazepines/index.html` and `phenobarbital-aws.html`. Next: native Google Sheets import/verification, item-level keep/update/remove and PGY-1/PGY-3 classification, dated source-to-claim/link crosswalk for high-stakes claims/calculators, and clinical sign-off before architecture exploration or educational-content changes.
 
 ## Upcoming
 - [x] Select the first topic unit for its detailed educational, technical, UX, and accessibility audit: alcohol and benzodiazepines.

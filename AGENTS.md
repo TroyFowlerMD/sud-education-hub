@@ -85,6 +85,18 @@ Append entries to WORKLOG.md using this shape:
 - When a task reveals an opportunity to streamline Dr. Fowler's workflow, present it proactively with the expected benefit, any risk or cost, and the smallest safe next step. Keep workflow suggestions clearly separate from required task work.
 - Avoid implying the live website changed unless changes were actually pushed and deployed.
 
+## Redesign Workflow Checkpoints
+- `docs/SUD_EDUCATION_REDESIGN.md` is the canonical order-of-operations record for the one-topic-unit-at-a-time redesign initiative. Read it with the required startup records and before every material review, decision, edit, or publishing action.
+- The first substantive user-facing reply in a new project conversation, and every other substantive user-facing reply after that, must begin with a concise **Workflow checkpoint**: canonical record, current gate, completed work, and next allowed action.
+- Every alternating substantive reply must state that the next reply will include a Workflow checkpoint and confirm the updated plan. Tool-call metadata and internal operations do not count as substantive replies.
+- Do not create Git churn merely to log a conversational checkpoint. Update the redesign document, tasks, worklog, and decisions when a real project milestone, decision, scope, blocker, or status change occurs.
+- If the canonical workflow is stale, ambiguous, or conflicts with the active task, report the conflict and resolve it in the durable records before taking a material action.
+
+## Citation and Link Accountability
+- Codex, not Dr. Fowler, is responsible for verifying that a cited source supports the claim, is current enough for its purpose, is the appropriate evidence type, and opens at its recorded direct URL before content approval or publication.
+- Put citations near retained high-stakes clinical, epidemiologic, numerical, medication, threshold, protocol, and calculator claims. Use linked citations whenever a stable accessible source URL exists, plus a complete linked reference section for each evidence page.
+- Record source, publication/update date, source type, direct URL, support status, link status, and clinical-sign-off status in the site-specific audit or decision workbook. Escalate inaccessible, conflicting, outdated, paywalled, or unsupported sources instead of asking Dr. Fowler to validate them manually.
+
 ## Project-Specific Rules
 - This repo is clinician/resident/fellow-facing; patient education stays in sud-patient-education.
 - Keep topic pages in separate folders instead of flattening them.
@@ -92,6 +104,7 @@ Append entries to WORKLOG.md using this shape:
 - Opioid .docx resources stay with the opioid topic.
 - Public pages should avoid legacy-source or migration language; keep that history in README/docs.
 - For evidence pages, keep numeric claims only when traceable to published abstracts; otherwise use direction-and-magnitude language.
+- Future evidence pages must receive a Codex-performed rendered citation/link review before publishing; verify visible citation placement, link destination, and source-to-claim support separately from clinical sign-off.
 - Prefer local editing for non-trivial multi-edit passes instead of GitHub web-editor find/replace.
 
 ## Verification Guidance

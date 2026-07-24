@@ -30,6 +30,10 @@ Together, the two self-contained HTML/JavaScript surfaces are approximately 324 
 
 Teaching activities include 75 Jeopardy-style questions across three difficulty levels, five clinical cases, eight pharmacotherapy scenarios, 12 myth checks, and flashcards derived from the activities. Interactive tools include CIWA-Ar, benzodiazepine-equivalency, standard-drink, and medication-reference tools, plus search, theme, print, and feedback functions.
 
+### PGY-1 epidemiology foundation
+
+Add a compact orientation before the 32 audited topics, rather than a content-heavy new dashboard branch. It will contain three or four dated, Codex-verified claims on AUD burden, benzodiazepine use or misuse context, alcohol-related harm, treatment gap or equity, and surveillance limits. Seed sources are the current [NIAAA AUD statistics page](https://www.niaaa.nih.gov/alcohols-effects-health/alcohol-topics/alcohol-facts-and-statistics/alcohol-use-disorder-aud-united-states-age-groups-and-demographic-characteristics), [SAMHSA 2024 NSDUH detailed tables](https://www.samhsa.gov/data/sites/default/files/reports/rpt56484/NSDUHDetailedTabs2024/NSDUHDetailedTabs2024/2024-nsduh-detailed-tables.htm), and [CDC Alcohol Use FastStats](https://www.cdc.gov/nchs/fastats/alcohol.htm). Do not publish a numeric statement until its direct source, date, denominator, and claim support are verified in the crosswalk.
+
 ## Source and claim crosswalk
 
 | Claim area | Primary hierarchy | Baseline finding and required later handling |
@@ -72,6 +76,13 @@ Teaching activities include 75 Jeopardy-style questions across three difficulty 
 - High stakes: all withdrawal thresholds, disposition criteria, medication dose/contraindication/monitoring claims, benzodiazepine equivalents, cross-taper statements, phenobarbital protocols, calculator inputs and outputs, and numeric outcome claims.
 - Do not treat the page’s current calculators as point-of-care decision support until institutional ownership, intended use, validation, and clinician sign-off are determined.
 - Cite numeric claims to accessible published abstracts or use direction-and-magnitude language when a traceable numeric source is unavailable.
+- A source listed in a reference section is not sufficient by itself: retained high-stakes claims need nearby linked citations, source-to-claim verification, direct-link verification, and distinct clinical-sign-off state.
+
+## Decision workbook and citation assurance
+
+The prepared review workbook contains a PGY-1 epidemiology foundation plus the 32-topic map, teaching activities, tools/calculators, high-stakes source crosswalk, and a decision dashboard. It uses a custom-answer field on every decision row; dropdowns for single-select decisions; and review, accept-draft, and needs-discussion controls. Repository documentation remains canonical. The workbook must be imported as native Google Sheets and visually verified before owner review begins.
+
+Codex owns the following before any approved content is published: verify the cited source supports the exact claim; record source type and update/publication date; verify the direct link opens to the intended source; verify citation placement in the rendered page; and flag inaccessible, stale, conflicting, paywalled, or unsupported sources. Clinical sign-off remains a separate requirement.
 
 ## Decision points before architecture or design
 
