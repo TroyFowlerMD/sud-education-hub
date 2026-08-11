@@ -4,6 +4,12 @@ This file records completed Codex work sessions for SUD Education Hub. Append ne
 
 ---
 
+### 2026-08-11 - Codex desktop - Root feedback enrollment and PR validation
+- Completed: Enrolled the SUD Education Hub homepage in the shared `website-feedback` service with the registered `sud-education-hub` App ID, without changing educational content.
+- Completed: Added a pull-request validation check that verifies the root feedback client and local HTML file references, supplying the required safety check for future automated fixes.
+- In progress: Publish the reviewed change and verify the live GitHub Pages homepage before completing the cross-repository automation rollout.
+- Blockers/notes: None.
+
 ## Entry Format
 
     ### YYYY-MM-DD - [machine/profile] - [session summary]
