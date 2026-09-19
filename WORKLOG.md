@@ -74,3 +74,8 @@ This file records completed Codex work sessions for SUD Education Hub. Append ne
 - In progress: Owner item-level keep/update/remove and PGY-1/PGY-3 decisions, then Codex's dated source-to-claim/link crosswalk and independent clinical sign-off.
 - Blockers/notes: No workbook infrastructure blocker remains. No educational page, calculator, hosting, or public-site content changed.
 
+
+### 2026-09-19 - Codex - IT request #141 feedback wording
+- Completed: Updated the five topic feedback cards and active shared client with the requested title and button wording.
+- In progress: Publish and verify the live topic pages.
+- Blockers/notes: This is shared feedback interface text only; the active alcohol/benzodiazepines content audit and clinical review gates are unchanged.
