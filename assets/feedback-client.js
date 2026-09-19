@@ -97,7 +97,7 @@
     var id = 'sud-feedback-' + topic.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
     var attachments = [];
     box.innerHTML = [
-      '<h2>Feedback / IT Request</h2>',
+      '<h2>IT requests / Feedback</h2>',
       '<p class="sud-feedback-help">Report an issue, request a change, or share a correction. Add up to three screenshots. Do not include patient details or passwords.</p>',
       '<form class="sud-feedback-form" novalidate>',
       '<div class="sud-feedback-field"><label for="' + id + '-name">Name</label><input id="' + id + '-name" name="name" autocomplete="name" required></div>',
@@ -105,7 +105,7 @@
       '<div class="sud-feedback-field"><label for="' + id + '-message">Request / Comment</label><textarea id="' + id + '-message" name="message" required placeholder="Describe the issue or requested change. You can paste a screenshot here."></textarea></div>',
       '<div class="sud-feedback-attach"><div class="sud-feedback-attach-row"><button type="button" class="sud-feedback-add">Add screenshots</button><span class="sud-feedback-hint">PNG, JPG, or WebP</span></div><input class="sud-feedback-files" type="file" accept="image/png,image/jpeg,image/webp" multiple hidden><div class="sud-feedback-list"></div><div class="sud-feedback-status" aria-live="polite">No screenshots added.</div></div>',
       '<p class="sud-feedback-message" role="status" aria-live="polite"></p>',
-      '<button class="sud-feedback-submit" type="submit">Send</button>',
+      '<button class="sud-feedback-submit" type="submit">Submit Ticket/ Feedback</button>',
       '</form>'
     ].join('');
 
